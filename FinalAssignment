@@ -13,9 +13,13 @@ laser "$string"
 wait 1
 x=$l5
 y=$l6
-th=$l7
+th=($l7/Pi)*180
 eval x
 eval y
 eval th
+
+drivew x y th:($targetdist<0.15)
+wait 5
+
 pn=pn-1
 if (pn>-1) "loop"
