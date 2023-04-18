@@ -1,8 +1,7 @@
 laser "localize"
 laser "push t='1.0' cmd='localize'"
 wait 1
-turn 180
-wait 1
+
 
 laser "findroute startx=0.5 starty=0.5 endx=4.5 endy=4.5"
 wait 1
