@@ -26,7 +26,6 @@ eval th
 
 ignoreobstacles
 drivew x y th:($targetdist<0.15)
-wait 1
 
 pn=pn-1
 if (pn>-1) "loop"
