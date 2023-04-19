@@ -1,12 +1,12 @@
 Pi = 3.14159265359
 
+laser "findroute startx=0.5 starty=0.5 endx=4.5 endy=4.5"
+wait 1
+
 laser "localize"
 laser "push t='1.0' cmd='localize'"
 wait 3
 turn 90
-
-laser "findroute startx=0.5 starty=0.5 endx=4.5 endy=4.5"
-wait 1
 
 pn = $l4
 eval pn
