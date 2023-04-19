@@ -21,6 +21,7 @@ eval x
 eval y
 eval th
 
+ignoreobstacles
 drivew x y th:($targetdist<0.15)
 wait 1
 
