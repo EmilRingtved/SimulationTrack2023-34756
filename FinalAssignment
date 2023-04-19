@@ -1,4 +1,8 @@
 Pi = 3.14159265359
+set "$odox" 0
+set "$odoy" 0
+set "$odoth" 0
+
 xstart=$odox+0.3
 ystart=$odox+0.3
 
