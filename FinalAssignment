@@ -2,7 +2,8 @@ Pi = 3.14159265359
 
 laser "localize"
 laser "push t='1.0' cmd='localize'"
-wait 1
+wait 3
+
 laser "findroute startx=0.5 starty=0.5 endx=4.5 endy=4.5"
 wait 1
 
@@ -19,7 +20,7 @@ eval x
 eval y
 eval th
 
-drivew x y th:($targetdist<0.15)
+drivew x y th:($targetdist<0.05)
 wait 1
 
 pn=pn-1
