@@ -2,13 +2,15 @@
 Pi = 3.14159265359
 
 % init odometry
-set "$odox" 0
-set "$odoy" 0
+set "$odox" 0.3
+set "$odoy" 0.3
 set "$odoth" 0
 
-% origin
-xstart=$odox+0.3
-ystart=$odox+0.3
+%kalman
+laser "localize"
+laser "push t='1.0' cmd='localize'"
+wait 1
+
 
 xEnd=4.5
 yEnd=4.5
@@ -29,12 +31,6 @@ label "go"
 %call "updateWorld"
 laser "findroute startx=xCur starty=yCur endx=xEnd endy=yEnd"
 wait 1
-
-laser "localize"
-laser "push t='1.0' cmd='localize'"
-wait 3
-turn 90
-
 
 pn = $l4
 eval pn
