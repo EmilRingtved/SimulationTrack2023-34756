@@ -1,11 +1,6 @@
 % Constants
 Pi = 3.14159265359
 
-% init odometry
-set "$odox" 0.3
-set "$odoy" 0.3
-set "$odoth" 0
-
 %kalman
 laser "localize"
 laser "push t='1.0' cmd='localize'"
