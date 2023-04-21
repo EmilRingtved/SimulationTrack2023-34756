@@ -58,4 +58,5 @@ thCur = $res2
 eval xCurr
 eval yCurr
 eval thCurr
+call "loop"
 return
