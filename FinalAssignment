@@ -28,7 +28,6 @@ eval thCur
 
 % movement 
 label "go"
-%call "updateWorld"
 laser "findroute startx=xCur starty=yCur endx=xEnd endy=yEnd"
 wait 1
 
