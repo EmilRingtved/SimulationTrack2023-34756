@@ -7,7 +7,7 @@ laser "push t='1.0' cmd='localize'"
 wait 1
 
 
-xEnd=4.5
+xEnd=3.5
 yEnd=4.5
 
 % Update the robots position in world coordinates
