@@ -20,10 +20,9 @@ wait 1
 xCur = $res0
 yCur = $res1
 thCur = $res2
-eval xCurr
-eval yCurr
-eval thCurr
-call "go"
+eval xCur
+eval yCur
+eval thCur
 
 % movement 
 label "go"
