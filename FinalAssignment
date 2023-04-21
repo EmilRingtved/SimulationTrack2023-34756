@@ -6,10 +6,6 @@ laser "localize"
 laser "push t='1.0' cmd='localize'"
 wait 1
 
-
-xEnd=-0.1
-yEnd=1.5
-
 % Update the robots position in world coordinates
 %label "updateWorld"
 %invtrans $l0 $l1 $l2 $odox $odoy $odoth
@@ -23,7 +19,7 @@ yEnd=1.5
 
 % movement 
 label "go"
-laser "findroute startx=xCur starty=yCur endx=xEnd endy=yEnd"
+laser "findroute startx=xCur starty=yCur endx=-0.5 endy=1.5"
 wait 1
 
 pn = $l4
