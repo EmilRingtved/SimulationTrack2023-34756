@@ -1,12 +1,25 @@
+% Constants
 Pi = 3.14159265359
+
+% init odometry
 set "$odox" 0
 set "$odoy" 0
 set "$odoth" 0
 
+% origin
 xstart=$odox+0.3
 ystart=$odox+0.3
 
-laser "findroute startx=xstart starty=ystart endx=4.5 endy=4.5"
+xEnd=4.5
+yEnd=4.5
+
+% Main
+call "go"
+
+% movement 
+label "go"
+call "updateWorld"
+laser "findroute startx=xCur starty=yCur endx=xEnd endy=yEnd"
 wait 1
 
 laser "localize"
@@ -33,3 +46,16 @@ drivew x y th:($targetdist<0.15)
 
 pn=pn-1
 if (pn>-1) "loop"
+return
+
+% Update the robots position in world coordinates
+label "updateWorld"
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+wait 1 
+xCur = $res0
+yCur = $res1
+thCur = $res2
+eval xCurr
+eval yCurr
+eval thCurr
+return
