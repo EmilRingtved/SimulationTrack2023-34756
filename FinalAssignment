@@ -14,7 +14,7 @@ xEnd=4.5
 yEnd=4.5
 
 % Main
-call "go"
+call "updateWorld"
 
 % movement 
 label "go"
@@ -58,4 +58,5 @@ thCur = $res2
 eval xCurr
 eval yCurr
 eval thCurr
+call "go"
 return
