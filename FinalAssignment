@@ -18,7 +18,7 @@ call "go"
 
 % movement 
 label "go"
-call "updateWorld"
+%call "updateWorld"
 laser "findroute startx=xCur starty=yCur endx=xEnd endy=yEnd"
 wait 1
 
@@ -58,5 +58,4 @@ thCur = $res2
 eval xCurr
 eval yCurr
 eval thCurr
-call "loop"
 return
