@@ -11,15 +11,15 @@ xEnd=-0.1
 yEnd=1.5
 
 % Update the robots position in world coordinates
-label "updateWorld"
-invtrans $l0 $l1 $l2 $odox $odoy $odoth
-wait 1 
-xCur = $res0
-yCur = $res1
-thCur = $res2
-eval xCur
-eval yCur
-eval thCur
+%label "updateWorld"
+%invtrans $l0 $l1 $l2 $odox $odoy $odoth
+%wait 1 
+%xCur = $res0
+%yCur = $res1
+%thCur = $res2
+%eval xCur
+%eval yCur
+%eval thCur
 
 % movement 
 label "go"
