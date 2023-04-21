@@ -13,8 +13,18 @@ ystart=$odox+0.3
 xEnd=4.5
 yEnd=4.5
 
-% Main
-call "updateWorld"
+% Update the robots position in world coordinates
+label "updateWorld"
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+wait 1 
+xCur = $res0
+yCur = $res1
+thCur = $res2
+eval xCurr
+eval yCurr
+eval thCurr
+call "go"
+return
 
 % movement 
 label "go"
@@ -48,15 +58,4 @@ pn=pn-1
 if (pn>-1) "loop"
 return
 
-% Update the robots position in world coordinates
-label "updateWorld"
-invtrans $l0 $l1 $l2 $odox $odoy $odoth
-wait 1 
-xCur = $res0
-yCur = $res1
-thCur = $res2
-eval xCurr
-eval yCurr
-eval thCurr
-call "go"
-return
+
