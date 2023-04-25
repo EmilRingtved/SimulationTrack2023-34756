@@ -24,7 +24,8 @@ nextPointY = 1.5
 
 % movement 
 label "go"
-laser "findroute startx=xCur starty=yCur endx=nextPointX endy=nextPointY"
+stringcat "findroute startx="xCur" starty="yCur" endx="nextPointX" endy="nextPointY
+laser "$string"
 wait 1
 
 pn = $l4
