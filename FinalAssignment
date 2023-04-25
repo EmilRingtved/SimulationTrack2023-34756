@@ -47,7 +47,7 @@ if (pn>-1) "loop"
 
 
 
-turn nextPointTh
+turn nextPointTh "rad"
 
 xCur = nextPointX
 yCur = nextPointY
