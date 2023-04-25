@@ -46,8 +46,15 @@ pn=pn-1
 if (pn>-1) "loop"
 wait 1
 % turn to point
-tht = (thCur - th)
+
+label "turnLoop"
+tht = (nextPointTh - thCur)
+switch(tht)
+ case tht<0: turn 10
+ case tht>0: turn -10
+endswitch
 turn tht "rad"
+if(tht != 0) "turnLoop"
 
 xCur = nextPointX
 yCur = nextPointY
@@ -60,6 +67,7 @@ if ($fiducialid == -1) "fineTurn"
 if ($fiducialid != -1) "driveTo"
 
 label "fineTurn"
+wait 1
 goto "QRdetection"
 
 label "driveTo"
