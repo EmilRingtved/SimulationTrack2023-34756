@@ -47,7 +47,13 @@ drivew x y th @v0.25:($targetdist<0.25)
 
 pn=pn-1
 if (pn>-1) "loop"
-goto "updateWorld"
+
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+wait 1 
+xCur = $res0
+yCur = $res1
+thCur = $res2
+
 tht = nextPointTh-thCur
 turn tht "rad"
 
