@@ -21,6 +21,7 @@ xCur = 0.3
 yCur = 0.3
 nextPointX = -0.5
 nextPointY = 1.5
+nextPointTh = 0
 
 % movement 
 label "go"
@@ -49,12 +50,13 @@ eval locX
 eval locY
 eval locTh
 
+
 drivew x y th:($targetdist<0.25)
 
 
 pn=pn-1
 if (pn>-1) "loop"
-
+turn (nextPointTh - th)
 xCur = nextPointX
 yCur = nextPointY
 
