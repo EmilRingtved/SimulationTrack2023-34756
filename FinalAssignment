@@ -43,7 +43,7 @@ eval th
 
 locX  = $l0
 locY = $l1
-locYh =  $l2
+locTh =  $l2
 
 eval locX
 eval locY
