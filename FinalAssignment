@@ -56,7 +56,7 @@ drivew x y th:($targetdist<0.25)
 
 pn=pn-1
 if (pn>-1) "loop"
-turn (nextPointTh - th)
+turn (nextPointTh-th)
 xCur = nextPointX
 yCur = nextPointY
 
