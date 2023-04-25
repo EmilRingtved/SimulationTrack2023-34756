@@ -39,7 +39,7 @@ th=($l7/Pi)*180
 eval x
 eval y
 eval th
-tht = $odoth - atan2(x,y)
+tht = $odoth - atan2(y,x)
 turn tht "rad" @v0.5
 drivew x y th:($targetdist<0.25)
 
