@@ -17,6 +17,8 @@ wait 1
 %eval yCur
 %eval thCur
 
+xCur = 0.3
+yCur = 0.3
 nextPointX = -0.5
 nextPointy = 1.5
 
