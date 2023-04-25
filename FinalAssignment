@@ -1,18 +1,28 @@
 % Constants
 Pi = 3.14159265359
 
+% initials
+nextPointX = -0.5
+nextPointY = 1.5
+nextPointTh = 0
+
 %kalman
 laser "localize"
 laser "push t='1.0' cmd='localize'"
 wait 1
 
 % Update the robots position in world coordinates
+
 label "updateWorld"
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+wait 1 
+xCur = $res0
+yCur = $res1
+thCur = $res2
+eval xCur
+eval yCur
+eval thCur
 
-
-nextPointX = -0.5
-nextPointY = 1.5
-nextPointTh = 0
 
 % movement 
 label "go"
@@ -37,16 +47,7 @@ drivew x y th @v0.25:($targetdist<0.25)
 
 pn=pn-1
 if (pn>-1) "loop"
-
-invtrans $l0 $l1 $l2 $odox $odoy $odoth
-wait 1 
-xCur = $res0
-yCur = $res1
-thCur = $res2
-eval xCur
-eval yCur
-eval thCur
-
+goto "updateWorld"
 tht = nextPointTh-thCur
 turn tht "rad"
 
@@ -90,98 +91,98 @@ turn 180
 nextPointX = 0.5
 nextPointY = 1.5
 nextPointTh = Pi
-goto "go"
+goto "updateWorld"
 
 label "gm2"
 turn 180
 nextPointX = -0.5
 nextPointY = 1.5
 nextPointTh = 0
-goto "go"
+goto "updateWorld"
 
 label "gm3"
 turn 180
 nextPointX = 3.5
 nextPointY = 1.5
 nextPointTh = Pi
-goto "go"
+goto "updateWorld"
 
 label "gm4"
 turn 180
 nextPointX = 4
 nextPointY = 1.5
 nextPointTh = -Pi
-goto "go"
+goto "updateWorld"
 
 label "gm5"
 turn 180
 nextPointX = -0.5
 nextPointY = 3.5
 nextPointTh = 0
-goto "go"
+goto "updateWorld"
 
 label "gm6"
 turn 180
 nextPointX = 0.5
 nextPointY = 3.5
 nextPointTh = -Pi
-goto "go"
+goto "updateWorld"
 
 label "gm7"
 turn 180
 nextPointX = 3.5
 nextPointY = 3.5
 nextPointTh = 0
-goto "go"
+goto "updateWorld"
 
 label "gm8"
 turn 180
 nextPointX = 4.5
 nextPointY = 4.5
 nextPointTh = -Pi
-goto "go"
+goto "updateWorld"
 
 label "gm9"
 turn 180
 nextPointX = 0.5
 nextPointY = 4.5
 nextPointTh = -Pi
-goto "go"
+goto "updateWorld"
 
 label "gm10"
 turn 180
 nextPointX = 3.5
 nextPointY = 4.5
 nextPointTh = 0
-goto "go"
+goto "updateWorld"
 
 label "gm11"
 turn 180
 nextPointX = 0.5
 nextPointY = 4.5
 nextPointTh = -Pi/2
-goto "go"
+goto "updateWorld"
 
 label "gm12"
 turn 180
 nextPointX = 3.5
 nextPointY = 4.5
 nextPointTh = -Pi/2
-goto "go"
+goto "updateWorld"
 
 label "gm13"
 turn 180
 nextPointX = 1.5
 nextPointY = 4
 nextPointTh = 0
-goto "go"
+goto "updateWorld"
 
 label "gm14"
 turn 180
 nextPointX = 2.5
 nextPointY = 4.5
 nextPointTh = -Pi
-goto "go"
+goto "updateWorld"
 
 stop
 
