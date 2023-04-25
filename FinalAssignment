@@ -41,12 +41,11 @@ eval y
 eval th
 
 drivew x y th:($targetdist<0.25)
-wait 2
 
 
 pn=pn-1
 if (pn>-1) "loop"
-fwd 1
+
 xCur = nextPointX
 yCur = nextPointY
 
@@ -83,84 +82,98 @@ if ($fiducialid == 14) "gm14"
 
 
 label "gm1"
+turn 180
 nextPointX = 0.5
 nextPointY = 1.5
 nextPointTh = Pi/2
 goto "go"
 
 label "gm2"
+turn 180
 nextPointX = -0.5
 nextPointY = 1.5
 nextPointTh = 0
 goto "go"
 
 label "gm3"
+turn 180
 nextPointX = 3.5
-nextPointY = 0.5
+nextPointY = 1.5
 nextPointTh = Pi
 goto "go"
 
 label "gm4"
+turn 180
 nextPointX = 4
-nextPointY = 0.5
+nextPointY = 1.5
 nextPointTh = 0
 goto "go"
 
 label "gm5"
+turn 180
 nextPointX = -0.5
 nextPointY = 3.5
 nextPointTh = 0
 goto "go"
 
 label "gm6"
+turn 180
 nextPointX = 0.5
 nextPointY = 3.5
 nextPointTh = Pi
 goto "go"
 
 label "gm7"
+turn 180
 nextPointX = 3.5
 nextPointY = 3.5
 nextPointTh = 0
 goto "go"
 
 label "gm8"
+turn 180
 nextPointX = 4.5
 nextPointY = 4.5
 nextPointTh = Pi
 goto "go"
 
 label "gm9"
+turn 180
 nextPointX = 0.5
 nextPointY = 4.5
 nextPointTh = Pi
 goto "go"
 
 label "gm10"
+turn 180
 nextPointX = 3.5
 nextPointY = 4.5
 nextPointTh = 0
 goto "go"
 
 label "gm11"
+turn 180
 nextPointX = 0.5
 nextPointY = 4.5
 nextPointTh = Pi/2
 goto "go"
 
 label "gm12"
+turn 180
 nextPointX = 3.5
 nextPointY = 4.5
 nextPointTh = Pi/2
 goto "go"
 
 label "gm13"
+turn 180
 nextPointX = 1.5
 nextPointY = 4
 nextPointTh = 0
 goto "go"
 
 label "gm14"
+turn 180
 nextPointX = 2.5
 nextPointY = 4.5
 nextPointTh = Pi
