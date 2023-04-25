@@ -50,8 +50,10 @@ wait 1
 label "turnLoop"
 tht = (nextPointTh - thCur)
 switch(tht)
- case tht<0: turn 10
- case tht>0: turn -10
+ case (tht<0) 
+ turn 10
+ case (tht>0) 
+ turn -10
 endswitch
 turn tht "rad"
 if(tht != 0) "turnLoop"
