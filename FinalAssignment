@@ -83,13 +83,13 @@ if ($fiducialid == 14) "gm14"
 
 
 label "gm1"
-nextPointX = -0.5
+nextPointX = 0.5
 nextPointY = 1.5
 nextPointTh = Pi/2
 goto "go"
 
 label "gm2"
-nextPointX = 0.5
+nextPointX = -0.5
 nextPointY = 1.5
 nextPointTh = 0
 goto "go"
