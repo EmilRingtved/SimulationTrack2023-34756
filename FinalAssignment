@@ -51,16 +51,17 @@ eval locY
 eval locTh
 
 
-drivew x y th:($targetdist<0.25)
+drivew x y th @v0.25:($targetdist<0.5)
 
 
 pn=pn-1
 if (pn>-1) "loop"
+wait 1
 turnToGm = (nextPointTh-th)
 turn  turnToGm
 xCur = nextPointX
 yCur = nextPointY
-
+wait 1
 label "QRdetection"
 % detect
 get “guidemark”
