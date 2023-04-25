@@ -42,12 +42,12 @@ eval y
 eval th
 
 ignoreobstacles
-turn th
-drivew x y th:($targetdist<0.15)
+drivew x y th:($targetdist<0.05)
 
 
 pn=pn-1
 if (pn>-1) "loop"
+turn 180
 xCur = nextPointX
 yCur = nextPointY
 
