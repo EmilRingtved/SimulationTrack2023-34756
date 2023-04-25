@@ -46,9 +46,8 @@ pn=pn-1
 if (pn>-1) "loop"
 
 
-tht = (thCur - nextPointTh)
-eval tht
-turn tht
+
+turn nextPointTh
 
 xCur = nextPointX
 yCur = nextPointY
