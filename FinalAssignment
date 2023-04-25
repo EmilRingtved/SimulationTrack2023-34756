@@ -40,23 +40,16 @@ eval x
 eval y
 eval th
 
-drivew x y th @v0.25:($targetdist<0.5)
+drivew x y th @v0.25:($targetdist<0.15)
 
 pn=pn-1
 if (pn>-1) "loop"
 wait 1
-% turn to point
 
-label "turnLoop"
+wait 1
 tht = (nextPointTh - thCur)
-switch(tht)
- case (tht<0) 
- turn 10
- case (tht>0) 
- turn -10
-endswitch
-turn tht "rad"
-if(tht != 0) "turnLoop"
+turn tht
+
 
 xCur = nextPointX
 yCur = nextPointY
@@ -65,11 +58,15 @@ label "QRdetection"
 % detect
 get “guidemark”
 eval $fiducialid
-if ($fiducialid == -1) "fineTurn"
+if ($fiducialid == -1) "scan"
 if ($fiducialid != -1) "driveTo"
 
-label "fineTurn"
+label "scan"
 wait 1
+counter = 1
+turningAngle = counter*10
+turn turningAngle
+counter = counter*(-1)
 goto "QRdetection"
 
 label "driveTo"
