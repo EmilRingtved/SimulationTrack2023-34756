@@ -17,9 +17,12 @@ wait 1
 %eval yCur
 %eval thCur
 
+nextPointX = -0.5
+nextPointy = 1.5
+
 % movement 
 label "go"
-laser "findroute startx=xCur starty=yCur endx=-0.5 endy=1.5"
+laser "findroute startx=xCur starty=yCur endx=nextPointX endy=nextPointY"
 wait 1
 
 pn = $l4
@@ -40,4 +43,123 @@ drivew x y th:($targetdist<0.15)
 
 pn=pn-1
 if (pn>-1) "loop"
+
+
+label "QRdetection"
+% detect
+get “guidemark”
+eval $fiducialid
+if ($fiducialid == -1) "turn"
+if ($fiducialid != -1) "driveTo"
+
+label "turn"
+% turn
+turn 10
+goto "QRdetection"
+
+label "driveTo"
+% goto
+eval $fiducialids
+
+if ($fiducialid == 1) "gm1"
+if ($fiducialid == 2) "gm2"
+if ($fiducialid == 3) "gm3"
+if ($fiducialid == 4) "gm4"
+if ($fiducialid == 5) "gm5"
+if ($fiducialid == 6) "gm6"
+if ($fiducialid == 7) "gm7"
+if ($fiducialid == 8) "gm8"
+if ($fiducialid == 9) "gm9"
+if ($fiducialid == 10) "gm10"
+if ($fiducialid == 11) "gm11"
+if ($fiducialid == 12) "gm12"
+if ($fiducialid == 13) "gm13"
+if ($fiducialid == 14) "gm14"
+
+
+label "gm1"
+nextPointX = -0.5
+nextPointY = 1.5
+nextPointTh = Pi/2
+goto "go"
+
+label "gm2"
+nextPointX = 0.5
+nextPointY = 1.5
+nextPointTh = 0
+goto "go"
+
+label "gm3"
+nextPointX = 3.5
+nextPointY = 0.5
+nextPointTh = Pi
+goto "go"
+
+label "gm4"
+nextPointX = 4
+nextPointY = 0.5
+nextPointTh = 0
+goto "go"
+
+label "gm5"
+nextPointX = -0.5
+nextPointY = 3.5
+nextPointTh = 0
+goto "go"
+
+label "gm6"
+nextPointX = 0.5
+nextPointY = 3.5
+nextPointTh = Pi
+goto "go"
+
+label "gm7"
+nextPointX = 3.5
+nextPointY = 3.5
+nextPointTh = 0
+goto "go"
+
+label "gm8"
+nextPointX = 4.5
+nextPointY = 4.5
+nextPointTh = Pi
+goto "go"
+
+label "gm9"
+nextPointX = 0.5
+nextPointY = 4.5
+nextPointTh = Pi
+goto "go"
+
+label "gm10"
+nextPointX = 3.5
+nextPointY = 4.5
+nextPointTh = 0
+goto "go"
+
+label "gm11"
+nextPointX = 0.5
+nextPointY = 4.5
+nextPointTh = Pi/2
+goto "go"
+
+label "gm12"
+nextPointX = 3.5
+nextPointY = 4.5
+nextPointTh = Pi/2
+goto "go"
+
+label "gm13"
+nextPointX = 1.5
+nextPointY = 4
+nextPointTh = 0
+goto "go"
+
+label "gm14"
+nextPointX = 2.5
+nextPointY = 4.5
+nextPointTh = Pi
+goto "go"
+
+stop
 
