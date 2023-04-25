@@ -27,7 +27,6 @@ label "go"
 stringcat "findroute startx="xCur" starty="yCur" endx="nextPointX" endy="nextPointY
 laser "$string"
 wait 1
-
 pn = $l4
 eval pn
 label "loop"
@@ -42,7 +41,7 @@ eval y
 eval th
 
 ignoreobstacles
-drivew x y th:($targetdist<0.05)
+drivew x y th:($targetdist<0.25)
 
 
 pn=pn-1
