@@ -63,7 +63,7 @@ goto "QRdetection"
 
 label "driveTo"
 % goto
-eval $fiducialids
+eval $fiducialid
 
 if ($fiducialid == 1) "gm1"
 if ($fiducialid == 2) "gm2"
