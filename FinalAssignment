@@ -46,9 +46,7 @@ pn=pn-1
 if (pn>-1) "loop"
 wait 1
 % turn to point
-xTurn = nextPointX - xCur
-yTurn = nextPointY - yCur
-tht = (thCur - atan2(yTurn, xTurn))*(-1)
+tht = (thCur - th)
 turn tht "rad"
 
 xCur = nextPointX
