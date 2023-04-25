@@ -36,11 +36,19 @@ wait 1
 x=$l5
 y=$l6
 th=($l7/Pi)*180
+
 eval x
 eval y
 eval th
-tht = $odoth - atan2(y,x)
-turn tht "rad" @v0.5
+
+locX  = $l0
+locY = $l1
+locYh =  $l2
+
+eval locX
+eval locY
+eval locTh
+
 drivew x y th:($targetdist<0.25)
 
 
