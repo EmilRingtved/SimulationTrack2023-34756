@@ -34,7 +34,7 @@ eval pn
 label "loop"
 stringcat "getpoint p="pn
 laser "$string"
-wait 1
+
 x=$l5
 y=$l6
 th=($l7/Pi)*180
