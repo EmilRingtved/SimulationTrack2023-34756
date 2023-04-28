@@ -199,7 +199,7 @@ goto "updateWorld"
 label "gm14"
 turn 180
 nextPointX = 2.5
-nextPointY = 4.5
+nextPointY = 4
 nextPointTh = Pi
 goto "updateWorld"
 
