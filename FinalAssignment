@@ -40,8 +40,8 @@ x=$l5
 y=$l6
 th=($l7/Pi)*180
 
-if(sqrt((xold - x)^2 + (yold - y)^2 > 1) "highSpeed"
-if(sqrt((xold - x)^2 + (yold - y)^2 < 1) "lowSpeed"
+if(sqrt((xold - x)*(xold - x) + (yold - y)*(yold - y)) > 1) "highSpeed"
+if(sqrt((xold - x)*(xold - x) + (yold - y)*(yold - y)) < 1) "lowSpeed"
 
 label "highSpeed"
 driveSpeed = 0.25
