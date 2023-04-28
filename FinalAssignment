@@ -97,21 +97,21 @@ label "gm1"
 turn 180
 nextPointX = 0.5
 nextPointY = 1.5
-nextPointTh = Pi
+nextPointTh = 0
 goto "updateWorld"
 
 label "gm2"
 turn 180
 nextPointX = -0.5
 nextPointY = 1.5
-nextPointTh = 0
+nextPointTh = -pi
 goto "updateWorld"
 
 label "gm3"
 turn 180
 nextPointX = 3.5
 nextPointY = 1.5
-nextPointTh = Pi
+nextPointTh = 0
 goto "updateWorld"
 
 label "gm4"
@@ -146,14 +146,14 @@ label "gm8"
 turn 180
 nextPointX = 4.5
 nextPointY = 4.5
-nextPointTh = -Pi
+nextPointTh = Pi
 goto "updateWorld"
 
 label "gm9"
 turn 180
 nextPointX = 0.5
 nextPointY = 4.5
-nextPointTh = -Pi
+nextPointTh = Pi
 goto "updateWorld"
 
 label "gm10"
@@ -167,14 +167,14 @@ label "gm11"
 turn 180
 nextPointX = 0.5
 nextPointY = 4.5
-nextPointTh = -Pi/2
+nextPointTh = Pi/2
 goto "updateWorld"
 
 label "gm12"
 turn 180
 nextPointX = 3.5
 nextPointY = 4.5
-nextPointTh = -Pi/2
+nextPointTh = Pi/2
 goto "updateWorld"
 
 label "gm13"
@@ -188,7 +188,7 @@ label "gm14"
 turn 180
 nextPointX = 2.5
 nextPointY = 4.5
-nextPointTh = -Pi
+nextPointTh = Pi
 goto "updateWorld"
 
 stop
