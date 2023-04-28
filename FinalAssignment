@@ -35,7 +35,7 @@ eval pn
 label "loop"
 stringcat "getpoint p="pn
 laser "$string"
-wait 0.5
+% wait 0.5 % see if needed
 x=$l5
 y=$l6
 th=($l7/Pi)*180
@@ -204,6 +204,7 @@ nextPointX = 2.5
 nextPointY = 4.5
 nextPointTh = Pi
 goto "updateWorld"
+
 
 stop
 
