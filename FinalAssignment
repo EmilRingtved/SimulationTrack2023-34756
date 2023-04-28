@@ -2,9 +2,9 @@
 Pi = 3.14159265359
 
 % initials
-nextPointX = -0.5
+nextPointX = 0.5
 nextPointY = 1.5
-nextPointTh = 0
+nextPointTh = Pi
 driveSpeed = 0.25
 
 %kalman
