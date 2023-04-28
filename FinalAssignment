@@ -35,7 +35,7 @@ eval pn
 label "loop"
 stringcat "getpoint p="pn
 laser "$string"
-wait 1
+wait 0.5
 x=$l5
 y=$l6
 th=($l7/Pi)*180
@@ -45,7 +45,6 @@ eval y
 eval th
 
 drivew x y th @v driveSpeed:($targetdist<0.25)
-wait 1
 pn=pn-1
 if (pn>-1) "loop"
 
