@@ -6,6 +6,8 @@ nextPointX = 0.5
 nextPointY = 1.5
 nextPointTh = Pi
 driveSpeed = 0.25
+xold = 0.3
+yold = 0.3
 
 %kalman
 laser "localize"
