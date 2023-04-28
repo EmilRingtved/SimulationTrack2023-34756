@@ -55,6 +55,7 @@ yCur = $res1
 thCur = $res2
 
 tht = nextPointTh-thCur
+eval thCur
 turn tht "rad"
 
 xCur = nextPointX
