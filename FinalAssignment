@@ -106,98 +106,84 @@ if ($fiducialid == 14) "gm14"
 
 
 label "gm1"
-turn 180
 nextPointX = 0.5
 nextPointY = 1.5
 nextPointTh = 0
 goto "updateWorld"
 
 label "gm2"
-turn 180
 nextPointX = -0.5
 nextPointY = 1.5
 nextPointTh = -pi
 goto "updateWorld"
 
 label "gm3"
-turn 180
 nextPointX = 3.5
 nextPointY = 1.5
 nextPointTh = 0
 goto "updateWorld"
 
 label "gm4"
-turn 180
 nextPointX = 4
 nextPointY = 1.5
 nextPointTh = -Pi
 goto "updateWorld"
 
 label "gm5"
-turn 180
 nextPointX = -0.5
 nextPointY = 3.5
 nextPointTh = 0
 goto "updateWorld"
 
 label "gm6"
-turn 180
 nextPointX = 0.5
 nextPointY = 3.5
 nextPointTh = -Pi
 goto "updateWorld"
 
 label "gm7"
-turn 180
 nextPointX = 3.5
 nextPointY = 3.5
 nextPointTh = 0
 goto "updateWorld"
 
 label "gm8"
-turn 180
 nextPointX = 4.5
 nextPointY = 4.5
 nextPointTh = Pi
 goto "updateWorld"
 
 label "gm9"
-turn 180
 nextPointX = 0.5
 nextPointY = 4.5
 nextPointTh = Pi
 goto "updateWorld"
 
 label "gm10"
-turn 180
 nextPointX = 3.5
 nextPointY = 4.5
 nextPointTh = 0
 goto "updateWorld"
 
 label "gm11"
-turn 180
 nextPointX = 0.5
 nextPointY = 4.5
 nextPointTh = Pi/2
 goto "updateWorld"
 
 label "gm12"
-turn 180
 nextPointX = 3.5
 nextPointY = 4.5
 nextPointTh = Pi/2
 goto "updateWorld"
 
 label "gm13"
-turn 180
 nextPointX = 1.5
 nextPointY = 4
 nextPointTh = 0
 goto "updateWorld"
 
 label "gm14"
-turn 180
 nextPointX = 2.5
 nextPointY = 4
 nextPointTh = Pi
